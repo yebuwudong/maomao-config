@@ -21,11 +21,10 @@ waybar -c ~/.config/maomao/waybar/config -s ~/.config/maomao/waybar/style.css >/
 
 # dock
 lavalauncher -c ~/.config/maomao/lavalauncher/lavalauncher.conf >/dev/null 2>&1 &
-# lxqt-panel 2> /dev/null &
 
 # xwayland dpi scale
-# echo "Xft.dpi: 140" | xrdb -merge #dpi缩放
-xrdb merge ~/.Xresources >/dev/null 2>&1
+echo "Xft.dpi: 140" | xrdb -merge #dpi缩放
+# xrdb merge ~/.Xresources >/dev/null 2>&1
 
 # ime input
 fcitx5 --replace -d >/dev/null 2>&1 &
@@ -44,12 +43,6 @@ nm-applet >/dev/null 2>&1 &
 
 # Permission authentication
 /usr/lib/xfce-polkit/xfce-polkit >/dev/null 2>&1 &
-
-# for private use not for you
-[ -e /dev/sda4 ] && udisksctl mount -t ext4 -b /dev/sda4 >/dev/null 2>&1
-
-# idle to lightdown and shutdown screen
-~/.config/maomao/scripts/idle.sh >/dev/null 2>&1 &
 
 # inhibit by audio
 sway-audio-idle-inhibit >/dev/null 2>&1 &
