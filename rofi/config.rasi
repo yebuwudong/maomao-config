@@ -17,7 +17,7 @@
 }
 
 configuration {
-    // font: "Maple Mono NF CN bold 18";
+    font: "Maple Mono NF CN bold 18";
     modi: "drun";
     show-icons: true;
     drun-match-fields: "keywords,name";
