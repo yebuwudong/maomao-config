@@ -106,10 +106,6 @@
     background: transparent
 }
  
-.blank-window {
-    background: alpha(black, 0.1)
-}
- 
 .widget-title {
     color: #f9f5d7;
     background: @noti-bg-darker;
