@@ -7,6 +7,7 @@
     b-radius: 10px;
     g-padding: 8px;
     hl-color:#AC9259;
+    highlight: bold italic underline #fb4934;
     hlt-color: #000000cc;
     alt-color: #111111cc;
     wbg-color: #201B14;
@@ -22,10 +23,6 @@ configuration {
     show-icons: true;
     sort: true;
     sorting-method:"fzf";
-    matching: "prefix";
-    normalize-match:true;
-    tokenize:true;
-    drun-match-fields: "name,keywords,comment,generic";
     display-drun: " ";
 }
 
@@ -104,7 +101,24 @@ element selected.normal {
 	text-color: @hlt-color;
 }
 
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+element-text selected.normal {
+    highlight: bold italic underline rgb(92, 11, 0);
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+
 message {
     background-color: red;
     border: 0px solid;
+}
+
+textbox {
+    highlight:  @highlight;
+    text-color: @foreground;
 }
