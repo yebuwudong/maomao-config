@@ -20,7 +20,12 @@ configuration {
     font: "Maple Mono NF CN bold 18";
     modi: "drun";
     show-icons: true;
-    drun-match-fields: "keywords,name";
+    sort: true;
+    sorting-method:"fzf";
+    matching: "prefix";
+    normalize-match:true;
+    tokenize:true;
+    drun-match-fields: "name,keywords,comment,generic";
     display-drun: " ";
 }
 
@@ -36,7 +41,8 @@ listview {
 
 window {
     transparency: "real";
-    width: 700px;
+    width: 750px;
+    height: 500px;
     border-radius: @b-radius;
     background-color: @wbg-color;
     border: 4px solid;
